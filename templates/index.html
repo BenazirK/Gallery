@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div>
+    {% for image in images %}
+        <div>
+            <h4>{{ image.0 }}</h4>
+            <div>{{ image.1 }}</div>
+            <img src="{{ image.2 }}">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
