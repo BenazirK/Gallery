@@ -36,6 +36,6 @@ def reciever():
 @app.route("/details/<number>")
 def details(number):
     excel = load_workbook("gallery.xlsx")
-    page = excel["Лист1"]
+    page = excel["Лист1"]    
     lst = page[str(number)]
     return render_template("details.html", lst=lst)
